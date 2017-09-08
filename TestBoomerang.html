@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Management Information</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <style>
+			body{
+				width: 1140px;	
+			}
+			div.container > div{
+				float:left;
+				min-height:1px;
+			}
+			div.left{
+				width:160px;
+			}
+			div.middle{
+				width:780px;
+				margin:0 5px;
+			}
+			div.caroussel{
+
+			}
+			div.right{
+				width:180px;
+			}
+			div.subMenu > div{
+				float:left;
+				width:25%;
+			}
+			div.subMenu > div > img{
+				width:100%;
+			}
+			div.footer > div{
+				float:left;
+				width:50%;
+			}
+			div.footer > div > img{
+				width:100%;
+			}
+			.clearfix {
+				clear: both;
+			}
+		</style>
+	</head>
+    <body>
+    	<h1>Management Information</h1>
+        <div class="container">
+                 <div class="left">
+                 	<div id="left_boxes" style="display:none">
+	             		<div>
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/Analytics_little.png" alt="Banner">
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/GLOBAL_little.png" alt="Banner">
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/LOCAL_little.png" alt="Banner">
+	                 	</div>
+	                 	<div>
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/REPORTING_little.png" alt="Banner">
+	                 	</div>
+	                 	<div>
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/DATA VISUA_little.png" alt="Banner">
+	                 	</div>
+	                 	<div>
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/PLANNING_little.png" alt="Banner">
+	                 	</div>
+	                 </div>
+ 	            </div>
+                 <div class="middle">
+                 	<div id="banner" style="background-color:#eeebea; height:410px">
+	                 	<div id="big" class="caroussel">
+	                 		<div><img src="/Users/fabiosarmentopedro/Downloads/Images/BANNER.png" alt="Banner" width="780"></div>
+						  	<div><img src="/Users/fabiosarmentopedro/Downloads/Images/BANNER.png" alt="Banner" width="780"></div>
+						  	<div><img src="/Users/fabiosarmentopedro/Downloads/Images/BANNER.png" alt="Banner" width="780"></div>
+	                 	</div>
+	                 	<div id="little" class="caroussel" style="display: none">
+	                 		<div><img src="/Users/fabiosarmentopedro/Downloads/Images/BANNER_mini.png" alt="Banner" width="780"></div>
+						  	<div><img src="/Users/fabiosarmentopedro/Downloads/Images/BANNER_mini.png" alt="Banner" width="780"></div>
+						  	<div><img src="/Users/fabiosarmentopedro/Downloads/Images/BANNER_mini.png" alt="Banner" width="780"></div>
+	                 	</div>
+                 	</div>
+					<script type="text/javascript">
+						$(document).ready(function(){
+						  $('.caroussel').slick({
+						    autoplay: true,
+						    autoplaySpeed: 8000,
+						    arrows: false,
+						    dots: true,
+						    pauseOnHover: false
+						  });
+						});
+					</script>
+
+                 	<div id="bottom_boxes" class="subMenu">
+                 		<div>
+		                 	<img src="/Users/fabiosarmentopedro/Downloads/Images/RectangleAnalytics.png" alt="Banner">
+		                 	<img src="/Users/fabiosarmentopedro/Downloads/Images/GLOBAL-2.png" alt="Banner">
+		                 	<img src="/Users/fabiosarmentopedro/Downloads/Images/LOCAL-2.png" alt="Banner">
+                 		</div>
+                 		<div>
+		                 	<img src="/Users/fabiosarmentopedro/Downloads/Images/RectangleReport.png" alt="Banner">
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/GLOBALDecks.png" alt="Banner">
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/LOCALIrm.png" alt="Banner">
+                 		</div>
+                 		<div>
+	                 		<img src="/Users/fabiosarmentopedro/Downloads/Images/DATA VISUA.png" alt="Banner">
+	                 	</div>
+	             		<div>
+		             		<img src="/Users/fabiosarmentopedro/Downloads/Images/PLANNING.png" alt="Banner">
+             			</div>
+         			</div>
+         			<div id="sub_nav" style="display:none">
+     					<img src="/Users/fabiosarmentopedro/Downloads/Images/SOUS MENU.png" alt="Banner">
+     					<img src="/Users/fabiosarmentopedro/Downloads/Images/GLOBAL ANALYTICS.png" alt="Banner">
+         			</div>
+         			<script type="text/javascript">
+         				$( "#bottom_boxes" ).click(function() {
+						  $( "#big" ).fadeOut( "slow", function() {
+						    $("#banner").animate({height: "100px"}, "slow", "swing", function() {
+						    	$("#little").fadeIn( "slow");
+						    	$('#left_boxes').fadeIn("slow");
+						    	$('#four_teasers').fadeIn("slow");
+						    	$('#sub_nav').fadeIn("slow");
+						    	$('#content_area').fadeIn("slow");
+						    	// Animation complete.
+						    });
+						  });
+						  $( "#bottom_boxes" ).fadeOut( "slow", function() {
+						    // Animation complete.
+						  });
+						  $( "#three_teasers" ).fadeOut( "slow", function() {
+						    // Animation complete.
+						  });
+						});
+         			</script>
+         			<br class="clearfix" />
+         			<div class="footer">
+         				<div>
+         					<img src="/Users/fabiosarmentopedro/Downloads/Images/ABOUT.png" alt="Banner">
+         				</div>
+         				<div>
+         					<img src="/Users/fabiosarmentopedro/Downloads/Images/NEWS.png" alt="Banner">
+         				</div>
+         			</div>
+                 </div>
+                 <div class="right">
+                 	<div id="three_teasers">
+	                 	<img src="/Users/fabiosarmentopedro/Downloads/Images/REGISTRATION.png" alt="Banner">
+	                    <img src="/Users/fabiosarmentopedro/Downloads/Images/SURVEY.png" alt="Banner">
+	                    <img src="/Users/fabiosarmentopedro/Downloads/Images/CONTACT.png" alt="Banner">
+                    </div>
+                    <div id="four_teasers" style="display:none">
+	                 	<img src="/Users/fabiosarmentopedro/Downloads/Images/REGISTRATION.png" alt="Banner">
+	                    <img src="/Users/fabiosarmentopedro/Downloads/Images/WHY YOU NEED.png" alt="Banner">
+	                    <img src="/Users/fabiosarmentopedro/Downloads/Images/LEARN.png" alt="Banner">
+	                    <img src="/Users/fabiosarmentopedro/Downloads/Images/NEED HELP.png" alt="Banner">
+	                    <img src="/Users/fabiosarmentopedro/Downloads/Images/TRAINING.png" alt="Banner">
+                    </div>
+                 </div>
+		</div>
+    </body>
+</html>
